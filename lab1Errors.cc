@@ -1,8 +1,8 @@
 /**
  *   @file: lab1Errors.cc
- * @author: Enter your name
- *   @date: Enter today's date
- *  @brief: Add Description
+ * @author: Adam Ehlers
+ *   @date: 05/20/2023
+ *  @brief: This is a fixed version of the lab1Errors.cc file that will take in 3 values (a, b, and c), make a quadratic formula using these values as their constants, and find the quadratic roots
  */
 
 #include <iostream>

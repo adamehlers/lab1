@@ -12,7 +12,22 @@ using namespace std;
 
 
 int main(){
+    double investment_amount;
+    double annual_interest_rate;
+    double years;
 
+    cout << "Please enter the investment amount, the interest (in percent), and the duration (in years): ";
+    cin >> investment_amount >> annual_interest_rate >> years;
 
+    if (cin.fail()){
+        cout << "Error: One of the inputted values is not a number. Please run again and enter a valid number." << endl;
+        return 1;
+    }
 
+    else if (investment_amount < 0 || annual_interest_rate < 0 || years < 0){
+        cout << "Error: One of the inputted values is negative. Please run again and enter non-negative numbers." << endl;
+        return 1;
+    }
+
+    return 0;
 }

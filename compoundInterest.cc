@@ -15,18 +15,27 @@ int main(){
     double investment_amount;
     double annual_interest_rate;
     double years;
+    double future_value;
 
     cout << "Please enter the investment amount, the interest (in percent), and the duration (in years): ";
-    cin >> investment_amount >> annual_interest_rate >> years;
+    cin >> investment_amount >> annual_interest_rate >> years;  //Inputting the dollar amount to invest, the annual interest rate (in percent), and the duration to invest (in years). If so, an error message appears and stops the code.
 
-    if (cin.fail()){
+    if (cin.fail()){   //Checks to see if there is an invalid type being inputted (such as a string)
         cout << "Error: One of the inputted values is not a number. Please run again and enter a valid number." << endl;
         return 1;
     }
 
-    else if (investment_amount < 0 || annual_interest_rate < 0 || years < 0){
+    else if (investment_amount < 0 || annual_interest_rate < 0 || years < 0){   //Checks to see if any of the inputted values are negative. If so, an error message appears and stops the code.
         cout << "Error: One of the inputted values is negative. Please run again and enter non-negative numbers." << endl;
         return 1;
+    }
+
+    else{
+       future_value = investment_amount * pow(1 + (annual_interest_rate/100.00), years);
+       cout << "Investment Amount: $" << fixed << setprecision(2) << investment_amount << endl;
+       cout << "Interest: " << fixed << setprecision(2) << annual_interest_rate << "%" << endl;
+       cout << "Number of Years: " << fixed << setprecision(2) << years << endl;
+       cout << "Future Value: $" << fixed << setprecision(2) << future_value << endl;
     }
 
     return 0;

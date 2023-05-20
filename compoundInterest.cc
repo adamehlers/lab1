@@ -31,11 +31,11 @@ int main(){
     }
 
     else{
-       future_value = investment_amount * pow(1 + (annual_interest_rate/100.00), years);
-       cout << "Investment Amount: $" << fixed << setprecision(2) << investment_amount << endl;
-       cout << "Interest: " << fixed << setprecision(2) << annual_interest_rate << "%" << endl;
-       cout << "Number of Years: " << fixed << setprecision(2) << years << endl;
-       cout << "Future Value: $" << fixed << setprecision(2) << future_value << endl;
+       future_value = investment_amount * pow(1 + (annual_interest_rate/100.00), years);   //Calculates the future value of the invested funds
+       cout << "Investment Amount: $" << fixed << setprecision(2) << investment_amount << endl;   // Prints correctly formatted investment amount
+       cout << "Interest: " << fixed << setprecision(2) << annual_interest_rate << "%" << endl;   // Prints correctly formatted interest
+       cout << "Number of Years: " << fixed << setprecision(2) << years << endl;   // Prints correctly formatted number of years that the funds are accruing interest
+       cout << "Future Value: $" << fixed << setprecision(2) << future_value << endl;   // Prints correctly formatted future value of the invested funds
     }
 
     return 0;

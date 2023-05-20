@@ -21,12 +21,12 @@ int main(){
     cin >> investment_amount >> annual_interest_rate >> years;  //Inputting the dollar amount to invest, the annual interest rate (in percent), and the duration to invest (in years). If so, an error message appears and stops the code.
 
     if (cin.fail()){   //Checks to see if there is an invalid type being inputted (such as a string)
-        cout << "Error: One of the inputted values is not a number. Please run again and enter a valid number." << endl;
+        cout << "Error: At least one of the inputted values is not a number. Please run again and enter a valid number." << endl;
         return 1;
     }
 
     else if (investment_amount < 0 || annual_interest_rate < 0 || years < 0){   //Checks to see if any of the inputted values are negative. If so, an error message appears and stops the code.
-        cout << "Error: One of the inputted values is negative. Please run again and enter non-negative numbers." << endl;
+        cout << "Error: At least one of the inputted values is negative. Please run again and enter non-negative numbers." << endl;
         return 1;
     }
 
